@@ -18,6 +18,7 @@ public class Client implements Serializable {
     private String id;
     private String name;
     private String email;
+    @DBRef
     private Collection<Compte> compte;
 
     public Client(String name, String email) {

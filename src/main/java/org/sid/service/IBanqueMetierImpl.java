@@ -25,7 +25,7 @@ public class IBanqueMetierImpl implements IBanqueMetier {
     private OperationRepository operationRepository;
     @Override
     public Compte consulterCompte(String codeCompte) {
-        Compte cp = compteRepository.findById(codeCompte).get();
+        Compte cp = compteRepository.findByCodeCompte(codeCompte);
         if(cp==null) throw new RuntimeException("Compte introuvable");
         return cp;
     }
@@ -61,7 +61,7 @@ public class IBanqueMetierImpl implements IBanqueMetier {
 
     @Override
     public Collection<Operation> listOperation(String codeCompte) {
-        Collection<Operation> operations = operationRepository.listOperation(codeCompte);
+       Collection<Operation> operations = operationRepository.listOperation(codeCompte);
         return operations;
     }
 }

@@ -14,8 +14,8 @@ import java.util.Date;
 public class CompteCourant extends Compte{
     private double decouvert;
 
-    public CompteCourant(String codeCompte, Date dateCreation, double solde, Client client, Collection<Operation> operations, double decouvert) {
-        super(codeCompte, dateCreation, solde, client, operations);
+    public CompteCourant(String idCompte,String codeCompte, Date dateCreation, double solde, Client client, Collection<Operation> operations, double decouvert) {
+        super(idCompte,codeCompte, dateCreation, solde, client, operations);
         this.decouvert = decouvert;
     }
 
@@ -23,8 +23,8 @@ public class CompteCourant extends Compte{
         this.decouvert = decouvert;
     }
 
-    public CompteCourant(String codeCompte, Date dateCreation, double solde, Client client, double decouvert) {
-        super(codeCompte, dateCreation, solde, client);
+    public CompteCourant(String idCompte,String codeCompte, Date dateCreation, double solde, Client client, double decouvert) {
+        super(idCompte,codeCompte, dateCreation, solde, client);
         this.decouvert = decouvert;
     }
 }
